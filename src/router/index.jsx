@@ -1,4 +1,3 @@
-import React from "react";
 import {
   createBrowserRouter,
   createRoutesFromElements,
@@ -6,27 +5,19 @@ import {
   Route,
   RouterProvider,
 } from "react-router-dom";
-import Home from "../features/home/pages/Home";
-import Shop from "../features/shop/pages/Shop";
-import Blog from "../features/blogs/pages/Blog";
-import PlantCare from "../features/plant care/pages/PlantCare";
-import ClientPrivateRouter from "./ClientPrivateRouter";
-import ClientLayout from "../layout/ClientLayout";
 import LoginPage from "../features/auth/pages/LoginPage";
+import Blog from "../features/blogs/pages/Blog";
+import Home from "../features/home/pages/Home";
+import PlantCare from "../features/plant care/pages/PlantCare";
+import Shop from "../features/shop/pages/Shop";
+import ClientLayout from "../layout/ClientLayout";
 
 const Router = () => {
   const routes = createBrowserRouter(
     createRoutesFromElements(
       <>
         <Route path="/login" element={<LoginPage />} />
-        <Route
-          path="/"
-          element={
-            <ClientPrivateRouter>
-              <ClientLayout />
-            </ClientPrivateRouter>
-          }
-        >
+        <Route path="/" element={<ClientLayout />}>
           <Route index element={<Navigate to="/home" />} />
           <Route path="/home" element={<Home />} />
           <Route path="/shop" element={<Shop />} />
