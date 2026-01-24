@@ -1,12 +1,12 @@
 :root {
+  --color-primary: rgb(70, 163, 88);
 
-  --color-primary: rgb(70,163,88);
- 
-  --border-color: rgb(163,209,171);
+  --border-color: rgb(163, 209, 171);
+  --border-color-secondary: rgb(215,233,218);
 
-  --bg-primary: rgb(251,251,251);
-
-
+  --bg-primary: rgb(251, 251, 251);
+  --bg-footer: rgb(236, 246, 238);
+  --text-primary: rgb(114, 114, 114);
 }
 
 // [data-theme="dark"] {

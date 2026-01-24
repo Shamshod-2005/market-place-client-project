@@ -1,3 +1,205 @@
-.footer-content{
+.footer-content {
+  .footer-top-services {
     background-color: var(--bg-primary);
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    gap: 35px;
+    .personal-information {
+      display: flex;
+      gap: 15px;
+      width: 100%;
+
+      .line {
+        width: 1px;
+        height: 100%;
+        background-color: #e5e5e5;
+      }
+
+      .information-card {
+        h5 {
+          padding-top: 10px;
+        }
+        p {
+          color: var(--text-primary);
+          padding-top: 10px;
+        }
+      }
+    }
+    .newsletters {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      h5 {
+        font-weight: 700;
+      }
+      .newsletters-input {
+        display: flex;
+        box-shadow: #e5e5e5 0px 4px 6px -1px;
+
+        input {
+          width: 90%;
+          padding: 8px 15px;
+          border: 1px solid var(--border-color);
+          border-right: none;
+          outline: none;
+          border-radius: 4px 0 0 4px;
+
+          &:hover {
+            border-color: var(--color-primary);
+            outline: 2px solid var(--color-primary);
+            outline-offset: -2px;
+            transition: all linear;
+          }
+        }
+        button {
+          padding: 8px 15px;
+          border: 1px solid var(--border-color);
+          background-color: var(--color-primary);
+          color: #fff;
+          cursor: pointer;
+          border-radius: 0 4px 4px 0;
+
+          &:hover {
+            background-color: #57b169;
+          }
+        }
+      }
+      p {
+        color: var(--text-primary);
+      }
+    }
+  }
+
+  .footer-location {
+    background-color: var(--bg-footer);
+    padding: 20px 30px;
+    display: flex;
+    gap: 100px;
+    border-bottom: 2px solid var(--border-color-secondary);
+    border-top: 2px solid var(--border-color-secondary);
+    .footer-logo {
+      display: flex;
+      align-items: center;
+      gap: 1px;
+      img {
+        height: 40px;
+        // width: auto;
+        display: block;
+      }
+      h6 {
+        font-weight: 900;
+        margin: 0;
+        color: var(--color-primary);
+      }
+    }
+    .location,
+    .email,
+    .telephone {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+  }
+
+  .footer-links {
+    display: flex;
+    gap: 290px;
+    padding: 20px 30px;
+    background-color: var(--bg-primary);
+    border-bottom: 2px solid var(--border-color-secondary);
+    .footer-links-left {
+      display: flex;
+      gap: 140px;
+
+      .my-account,
+      .help-guide,
+      .categories {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        h5 {
+          font-weight: 700;
+        }
+        ul {
+          list-style: none;
+          padding: 0;
+          display: flex;
+          flex-direction: column;
+          gap: 8px;
+          a {
+            text-decoration: none;
+            color: var(--text-primary);
+            font-size: 14px;
+            font-weight: 400;
+
+            &:hover {
+              color: var(--color-primary);
+            }
+          }
+        }
+      }
+    }
+
+    .footer-links-right {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      .social-media {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        h5 {
+          font-weight: 700;
+        }
+        .connections {
+          display: flex;
+          gap: 15px;
+
+          a {
+            text-decoration: none;
+            color: var(--color-primary);
+            font-size: 20px;
+            border: 2px solid var(--border-color-secondary);
+            padding: 8px;
+            border-radius: 8px;
+            display: flex;
+
+            &:hover {
+              color: var(--color-primary);
+            }
+          }
+        }
+      }
+      .payments {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        h5 {
+          font-weight: 700;
+        }
+        .accept {
+          display: flex;
+          gap: 15px;
+
+          img {
+            height: 40px;
+            width: auto;
+            display: block;
+          }
+        }
+      }
+    }
+  }
+  .footer-bottom-part {
+    padding: 15px 30px;
+    text-align: center;
+    color: var(--text-primary);
+    font-size: 14px;
+  }
 }
