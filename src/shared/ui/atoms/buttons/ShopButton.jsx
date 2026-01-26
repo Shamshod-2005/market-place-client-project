@@ -9,8 +9,13 @@ const Btn = styled.button`
   border-radius: 5px;
 `;
 
-const ShopButton = ({ text }) => {
-  return <Btn>{text}</Btn>;
+const ShopButton = ({ text, icon }) => {
+  return (
+    <Btn>
+      {text}
+      {icon}
+    </Btn>
+  );
 };
 
 export default ShopButton;
