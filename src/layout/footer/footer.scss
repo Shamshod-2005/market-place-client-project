@@ -202,4 +202,30 @@
     color: var(--text-primary);
     font-size: 14px;
   }
+
+  @media (max-width: 768px) {
+    .footer-top-services {
+      flex-direction: column;
+      .personal-information {
+        flex-direction: column;
+        .line {
+          display: none;
+        }
+      }
+      .newsletters {
+        width: 100%;
+      }
+    }
+    .footer-location {
+      flex-direction: column;
+      gap: 20px;
+    }
+    .footer-links {
+      flex-direction: column;
+      gap: 50px;
+      .footer-links-left {
+        gap: 60px;
+      }
+    }
+  }
 }

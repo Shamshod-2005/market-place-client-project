@@ -1,18 +1,20 @@
-import ShopButton from "../../../shared/ui/atoms/buttons/ShopButton";
-import "./home.scss";
-import homeImg from "../../../assets/main-img.png";
 import { useQuery } from "@tanstack/react-query";
-import { products } from "../../../data/products";
-import ProductCard from "../../../components/ProductCard";
 import { FaArrowRightLong } from "react-icons/fa6";
-import promoImg1 from "../../../assets/promo-img1.png";
-import promoImg2 from "../../../assets/promo-img2.png";
 import blog1 from "../../../assets/01.png";
 import blog2 from "../../../assets/02.png";
 import blog3 from "../../../assets/03.png";
 import blog4 from "../../../assets/04.png";
+import homeImg from "../../../assets/main-img.png";
+import promoImg1 from "../../../assets/promo-img1.png";
+import promoImg2 from "../../../assets/promo-img2.png";
+import ProductCard from "../../../components/ProductCard";
+import { products } from "../../../data/products";
+import ShopButton from "../../../shared/ui/atoms/buttons/ShopButton";
+import "./home.scss";
 
 const Home = () => {
+ 
+
   const fetchCategories = async () => {
     const { data } = await axios.get(
       `${import.meta.env.VITE_API_URL}/category`,
@@ -28,11 +30,13 @@ const Home = () => {
   const categories = data?.categories || data || [];
   return (
     <div className="home">
+      
+
       <div className="home-header">
         <div className="home-title">
           <span>WELCOME TO GREENSHOP</span>
           <h1>
-            LET'S MAKE A <br /> BETTER <span>PLANET</span>
+            LET'S MAKE A  BETTER <span>PLANET</span>
           </h1>
           <p>
             We are an online plant shop offering a wide range of cheap and

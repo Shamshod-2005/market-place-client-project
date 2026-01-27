@@ -11,7 +11,6 @@
     gap: 1px;
     img {
       height: 40px;
-      // width: auto;
       display: block;
     }
     h6 {
@@ -25,12 +24,28 @@
     display: flex;
     align-items: center;
     gap: 25px;
+    position: relative;
     a {
       text-decoration: none;
       color: var(--text-primary);
       font-weight: 500;
+      position: relative;
       &:hover {
         color: var(--color-primary);
+      }
+    }
+    .active-link {
+      font-weight: 700;
+      color: #28a745;
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -18px;
+        height: 3px;
+        width: 100%;
+        background-color: #28a745;
       }
     }
   }
@@ -39,20 +54,53 @@
     display: flex;
     align-items: center;
     gap: 18px;
-    .login-link {
-        cursor: pointer;
+    // .login-link {
+    //     cursor: pointer;
+    //   display: flex;
+    //   align-items: center;
+    //   gap: 4px;
+    //   padding: 6px 10px;
+    //   border-radius: 6px;
+    //   font-weight: 500;
+    //   transition: color 0.3s;
+    //   background-color: var(--color-primary);
+
+    //   a {
+    //     color: white;
+    //     text-decoration: none;
+    //   }
+    // }
+  }
+}
+
+.navbar-content-responsive {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .navbar-content {
+    display: none;
+  }
+  .navbar-content-responsive {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    width: 100%;
+
+    .navbar-logo {
       display: flex;
       align-items: center;
-      gap: 4px;
-      padding: 6px 10px;
-      border-radius: 6px;
-      font-weight: 500;
-      transition: color 0.3s;
-      background-color: var(--color-primary);
-
-      a {
-        color: white;
-        text-decoration: none;
+      gap: 1px;
+      img {
+        height: 40px;
+        // width: auto;
+        display: block;
+      }
+      h6 {
+        font-weight: 900;
+        margin: 0;
+        color: var(--color-primary);
       }
     }
   }
