@@ -54,6 +54,7 @@
     display: flex;
     align-items: center;
     gap: 18px;
+    position: relative;
     // .login-link {
     //     cursor: pointer;
     //   display: flex;
@@ -70,6 +71,21 @@
     //     text-decoration: none;
     //   }
     // }
+    .product-number {
+      position: absolute;
+      top: 2px;
+      left: 55px;
+      color: white;
+      padding: 1px;
+      border-radius: 100%;
+      font-size: 12px;
+      background-color: var(--color-primary);
+      width: 18px;
+      height: 18px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
   }
 }
 

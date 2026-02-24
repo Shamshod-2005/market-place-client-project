@@ -7,16 +7,16 @@ const Btn = styled.button`
   color: white;
   border: none;
   border-radius: 5px;
- 
+
   @media (max-width: 768px) {
     padding: 8px 16px;
     font-size: 14px;
   }
 `;
 
-const ShopButton = ({ text, icon }) => {
+const ShopButton = ({ text, icon, ...props }) => {
   return (
-    <Btn>
+    <Btn {...props}>
       {text}
       {icon}
     </Btn>

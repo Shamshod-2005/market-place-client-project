@@ -1,0 +1,11 @@
+.auth-switch {
+  .auth-tab {
+    cursor: pointer;
+    font-weight: 400;
+  }
+
+  .auth-tab.active {
+    color: #198754;
+    font-weight: 500;
+  }
+}

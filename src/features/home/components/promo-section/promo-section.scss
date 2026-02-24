@@ -1,0 +1,42 @@
+.promo-section {
+  margin-top: 90px;
+  display: flex;
+  gap: 20px;
+
+  .promo-card {
+    border: 1px solid var(--border-color);
+    padding: 10px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: end;
+
+    .promo-content {
+      h5 {
+        font-size: 18px;
+        font-weight: 700;
+        margin-bottom: 10px;
+      }
+    }
+  }
+  @media (max-width: 768px) {
+    flex-direction: column;
+    .promo-card {
+      .promo-img {
+        img {
+          width: 150px;
+          height: 150px;
+        }
+      }
+      .promo-content {
+        h5 {
+          font-size: 16px;
+        }
+        p {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}

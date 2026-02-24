@@ -10,17 +10,16 @@ import AuthModal from "../../components/modal/AuthModal";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import Button from "react-bootstrap/Button";
 import { RxHamburgerMenu } from "react-icons/rx";
+import { useCartProduct } from "../../features/cart/hooks/useCartProduct";
 
-const Navbar = () => {
-  const [showAuthModal, setShowAuthModal] = useState(false);
-
-  const handleOpenModal = () => setShowAuthModal(true);
-  const handleCloseModal = () => setShowAuthModal(false);
-
+const Navbar = ({ cartItem }) => {
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+
+  const { cartProducts } = useCartProduct();
+
   return (
     <>
       <div className="navbar-content ">
@@ -62,11 +61,14 @@ const Navbar = () => {
 
         <div className="navbar-login">
           <IoSearch size={25} />
-          <HiOutlineShoppingCart size={25} />
+
+          <NavLink to="/cart" className="cart-icon">
+            <HiOutlineShoppingCart size={25} />
+            <span className="product-number">{cartProducts?.length}</span>
+          </NavLink>
+
           <div className="login-link">
-            {/* <RiLoginBoxLine color="#ffffff" size={20} /> */}
-            {/* <NavLink to="/login">Login</NavLink> */}
-            <AuthModal show={showAuthModal} handleClose={handleCloseModal} />
+            <AuthModal />
           </div>
         </div>
       </div>
@@ -119,10 +121,7 @@ const Navbar = () => {
                 Plant Care
               </NavLink>
               <div className="">
-                <AuthModal
-                  show={showAuthModal}
-                  handleClose={handleCloseModal}
-                />
+                <AuthModal />
               </div>
             </Offcanvas.Body>
           </Offcanvas>

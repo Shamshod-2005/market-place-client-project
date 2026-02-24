@@ -1,15 +1,13 @@
-import "./index.scss";
+import { ToastContainer } from "react-toastify";
 import "./App.scss";
-import Home from "./features/home/pages/Home";
+import "./index.scss";
 import Router from "./router";
-
-
 
 function App() {
   return (
     <div className="container">
       <Router />
-      
+      <ToastContainer />
     </div>
   );
 }

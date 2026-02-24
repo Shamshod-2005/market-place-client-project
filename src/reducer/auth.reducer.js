@@ -1,10 +1,3 @@
-// Initial state
-// export const initialState = {
-//   isAuth: localStorage.getItem("isAuth") == "true" ? true : false,
-//   user: localStorage.getItem("user")
-//     ? JSON.parse(localStorage.getItem("user"))
-//     : null,
-// };
 export const initialState = {
   isAuth: localStorage.getItem("isAuth") === "true",
   user:

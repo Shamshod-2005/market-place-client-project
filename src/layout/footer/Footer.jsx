@@ -22,7 +22,7 @@ import {
 const Footer = () => {
   const fetchCategories = async () => {
     const { data } = await axios.get(
-      `${import.meta.env.VITE_API_URL}/category`,
+     `${import.meta.env.VITE_API_URL}/category` 
     );
     return data;
   };
@@ -153,7 +153,7 @@ const Footer = () => {
               {!isLoading &&
                 !isError &&
                 categories.map((category) => (
-                  <li>
+                  <li key={category.id}>
                     <a key={category.id} href="">
                       {category.name}
                     </a>

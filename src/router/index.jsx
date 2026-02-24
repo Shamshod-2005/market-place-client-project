@@ -11,6 +11,8 @@ import Home from "../features/home/pages/Home";
 import PlantCare from "../features/plant care/pages/PlantCare";
 import Shop from "../features/shop/pages/Shop";
 import ClientLayout from "../layout/ClientLayout";
+import DetailPage from "../features/detail/page/DetailPage";
+import ShoppingCart from "../features/cart/pages/ShoppingCart";
 
 const Router = () => {
   const routes = createBrowserRouter(
@@ -19,10 +21,14 @@ const Router = () => {
         <Route path="/login" element={<LoginPage />} />
         <Route path="/" element={<ClientLayout />}>
           <Route index element={<Navigate to="/home" />} />
+
           <Route path="/home" element={<Home />} />
+          <Route path="/products/detail/:id" element={<DetailPage />} />
+
           <Route path="/shop" element={<Shop />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/plant-care" element={<PlantCare />} />
+          <Route path="/cart" element={<ShoppingCart />} />
 
           <Route path="*" element={<div>404 Not Found</div>} />
         </Route>

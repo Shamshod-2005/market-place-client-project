@@ -1,12 +1,25 @@
-import React from 'react'
+import "./shop.scss";
+import img1 from "../../../assets/shop/img1.png";
+import img2 from "../../../assets/shop/img2.png";
+import img3 from "../../../assets/shop/img3.png";
+import img4 from "../../../assets/shop/img4.png";
+import image from "../../../assets/shop/image.png";
+import { useProduct } from "../hooks/useProduct";
+import ShopButton from "../../../shared/ui/atoms/buttons/ShopButton";
+import { FaFacebookF, FaLinkedinIn, FaTwitter } from "react-icons/fa6";
+import { MdOutlineMail } from "react-icons/md";
+import Tab from "react-bootstrap/Tab";
+import Tabs from "react-bootstrap/Tabs";
 
 const Shop = () => {
-  return (
-    <div>
-    
-    <h1>Shop Page</h1>
-    </div>
-  )
-}
+  const { data, isLoading, error } = useProduct();
+  const product = data?.[0];
 
-export default Shop
+  return (
+    <div className="shop-page">
+    <h1>Shop</h1>
+    </div>
+  );
+};
+
+export default Shop;
