@@ -22,7 +22,7 @@ import {
 const Footer = () => {
   const fetchCategories = async () => {
     const { data } = await axios.get(
-     `${import.meta.env.VITE_API_URL}/category` 
+     `${import.meta.env.VITE_API_URL }/category` 
     );
     return data;
   };
